@@ -2,6 +2,30 @@ import React from 'react';
 import { useForm } from "react-hook-form";
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as Yup from 'yup';
+import Link from 'next/link';
+import styled from "@emotion/styled";
+
+const Back = styled.span`
+background-color:#ff3300;
+color:#fff;
+padding:10px;
+border-radius:3px;
+text-decoration-line: none;
+`;
+const Register = styled.span`
+background-color:#ff3300;
+color:#fff;
+padding:10px;
+border-radius:3px;
+text-decoration-line: none;
+`;
+const Reset = styled.span`
+background-color:#ff3300;
+color:#fff;
+padding:10px;
+border-radius:3px;
+text-decoration: none;
+`;
 
 function Write() {
     // form validation rules 
@@ -97,7 +121,14 @@ function Write() {
                         <button type="button" onClick={() => reset()} className="btn btn-secondary">Reset</button>
                     </div>
                 </form>
-            </div>
+                
+                <div className="back-to-home">
+                <ul className="navbar-nav mr-auto">
+                <li className="nav-item active">
+                <Link href="/">
+                <a className="back-home"><Back>Back To HomePage</Back></a>
+                </Link></li></ul></div>
+                </div>
         </div>
     )
 }
