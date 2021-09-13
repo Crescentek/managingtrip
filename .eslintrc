@@ -1,3 +1,9 @@
 {
-    "extends": ["acme"]
+    "extends": ["acme"],
+    "prettier/prettier": [
+        "error",
+        {
+          "endOfLine": "auto"
+        }
+      ]
 }
